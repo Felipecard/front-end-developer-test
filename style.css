@@ -1,0 +1,1173 @@
+/* ---------------------------------------   MENU   -------------------------------------------   */
+
+/* --------------- BOTOES DE CIMA  -----------   */
+
+.botao_mapa {
+    font-family: Raleway;
+    letter-spacing: 0.1em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+
+    display: inline-block;
+    margin: 1em;
+    padding: .3em .5em;
+    border-radius: 50px;
+    border: 2px solid #dad4d4;
+    color: black;
+    margin-top: 20px;
+    padding-top: 3px;  
+}
+
+.botao_mapa:hover {
+	opacity: 0.5;
+	transition: 400ms;
+}
+
+.pin {
+    width: 18px;
+}
+
+.botoes_cima {
+    display: inline; 
+}
+
+.botoes_cima ul {
+    list-style: none;
+    float: right;
+    margin-top: 20px;
+}
+
+.botoes_cima ul li {
+    display: flex;
+    display: inline;      
+}
+
+.botoes_cima a {
+    padding: 15px; 
+}
+
+.botoes_cima a:hover {
+	opacity: 0.5;
+    transition: 400ms;
+}
+
+.lupa {
+    margin-left: 20px;
+}
+
+
+/* --------------- MAIN DO MENU  -----------   */
+
+.logo {
+    width: 240px;
+    display: flex;
+    margin-top: -20px;
+}
+
+.menu {
+    width: 100%;
+    height: 50px;
+    font-family: Raleway;
+    font-style: normal;
+    display: flex;
+    font-size: 16px;
+    
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+
+.menu a {
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background-color: white;
+}
+
+.menu a:hover {
+    color: #D5A368
+}
+
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+
+}
+
+.menu ul li:hover ul {
+    visibility: visible;
+}
+
+.menu ul ul li {
+    float: none;
+    border-bottom: solid 1px #ccc;
+}
+
+
+/* --------------- MENU RESPONSIVO -----------   */
+
+label[for="menu_resp"] {
+    padding: 5px;
+    font-family: 'Arial';
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+label[for="menu_resp"]:hover {
+    color: #D5A368
+}
+
+#menu_resp {
+    display: none;
+}
+
+label[for="menu_resp"] {
+    display: none;
+}
+
+@media(max-width: 750px) {
+
+    header {
+        height: 50px;
+    }
+
+    label[for="menu_resp"] {
+        display: block;
+        float: left;
+        margin-top: 15px;
+    }
+
+    #menu_resp:checked ~ .menu {
+        margin-left: 0;
+    }
+
+    .menu {
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu ul li {
+        width: 100%;
+        float: left;
+    }
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+
+    .logo {
+        position: absolute;
+        left: 60px;
+        top: 33px;
+        width: 170px;
+        
+    }
+
+    .botao_mapa {
+        display: none;
+    }
+
+    .boy a, .coracao a {
+        display: none;
+    }
+
+    .botoes_cima ul {
+        margin-top: 30px;
+    }
+
+    .lupa {
+        margin-left: 0;
+    }
+
+}
+
+
+/* ---------------------------------------   SLIDE   -------------------------------------------   */
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    background: #fdfdfd;
+    font-family: 'Kosugi', sans-serif;
+}
+
+.contencao {
+    float: right;
+    margin: 20px auto 0 0;
+    width: 90%;
+    height: 900px;
+    background: #000;
+    overflow: hidden;
+    left: 100px !important;
+     
+}
+
+#imagemFundo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: 1s;
+
+}
+
+#txtImagem {
+    font-family: 'Playfair Display';
+    position: absolute;
+    top: 430px;
+    
+    font-size: 70px;
+    line-height: 107px;
+    color: white;           
+    white-space: nowrap;
+    letter-spacing: .1em;
+    left: 20%;
+}
+
+#circulo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 20%;
+    top: 960px;
+    border: 1.4px solid #D5A368;
+    box-sizing: border-box;
+    border-radius: 1em;
+
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 3px;   
+}
+
+#explore {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 26%;
+    top: 980px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#circulo:hover, #explore:hover, #circulo2:hover, #explore2:hover, 
+#circulo3:hover, #explore3:hover, #circulo4:hover, #explore4:hover {
+    opacity: 0.5;
+	transition: 400ms;
+}
+
+#botoes {   
+    position: absolute; 
+    list-style: none;
+    width: 150px;
+    float: left;
+    margin-top: 60px;   
+}
+
+#selec, #naoselec {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-style: inherit;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 30%; 
+}
+
+#anel {
+    border: 1px solid #D5A368;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding-right: 5px;
+    float: inline-start;
+    margin-top: -35px;
+    margin-left: 30px;
+}
+
+.linha {
+    position: absolute;
+    width: 150px;
+    height: 1px;
+    left: -20px;
+    top: 560px;
+    background: #D5A368;
+    transform: rotate(-90deg);
+}
+
+.discover_more {
+    position: absolute;
+    width: 205px;
+    height: 43px;
+    left: -35px;
+    top: 775px;
+    font-family:'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #333333;
+    transform: rotate(-90deg);
+}
+
+
+
+/* --------------- SLIDE RESPONSIVO -----------   */
+
+@media(max-width: 700px) {
+    .linha, .discover_more {
+        display: none;
+    }
+
+    .contencao {
+        position: none;
+        width: 100%;
+        height: 421px;
+        left: 0;
+        top: 80px;
+    }
+
+    #botoes {
+        float: none;
+        position: relative; 
+        list-style: none;
+        display: flex;
+        /* topo | direita | inferior | esquerda */
+        margin: 470px 0 0 20%;
+    }
+
+
+    #txtImagem {
+        position: absolute;
+        top: 155px;
+        left: 16px;
+        font-size: 50px;
+
+        white-space: normal;
+        LINE-HEIGHT: 50px;
+    }
+
+    #anel {
+        border: 1px solid #D5A368;
+        box-sizing: border-box;
+        border-radius: 50%;
+        
+        height: 45px;
+        
+        padding-left: 40px;
+        margin-top: 32px;
+        margin-left: -30px;
+        margin-right: 0;
+    }
+
+    #circulo {
+        left: 40px;
+        top: 440px;
+    }
+
+    #explore {
+        left: 100px;
+        top: 455px;
+    }
+}
+
+/* -------------------------------------   RETANGULO ROSA   ----------------------------------------   */
+
+
+.retangulo_rosa {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    left: 0px;
+    top: 1090px;
+    background: #F9EFE4;
+}
+
+.titulo_retangulo {
+    position: absolute;
+    width: 600px;
+    height: 209px;
+    left: 130px;
+    top: 200px;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 96px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+.txt_retangulo {
+    position: absolute;
+    width: 574px;
+    height: 55px;
+    left: 130px;
+    top: 400px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+#circulo2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 130px;
+    top: 500px;
+    border: 1.4px solid #D5A368;
+    box-sizing: border-box;
+    border-radius: 1em;
+
+    color: rgb(37, 37, 37);
+    font-size: 30px;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 4px;   
+}
+
+#explore2 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 190px;
+    top: 515px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #242323;
+}
+
+.relogio { 
+    width: 500px;
+    height: 700px;
+    left: 810px;
+    top: 0;
+    float: right;
+}
+
+/* ------------- RETANG. ROSA RESPONSIVO ----------   */
+
+@media(max-width: 700px) {
+    .retangulo_rosa {
+        position: absolute;
+        width: 100%;
+        height: 700px;
+        left: 0px;
+        top: 620px;
+        background: #F9EFE4;
+    }
+    
+    .titulo_retangulo {
+        width: 310px;
+        height: 209px;
+        left: 40px;
+        top: 100px;
+
+        font-size: 42px;
+        line-height: 100%;
+    }
+    
+    .txt_retangulo {  
+        width: 297px;
+        height: 98px;
+        left: 40px;
+        top: 200px;
+        font-size: 16px;
+        line-height: 152.62%;      
+    }
+    
+    #circulo2 {
+        left: 60px;
+        top: 300px;    
+    }
+    
+    #explore2 {     
+        left: 120px;
+        top: 320px;
+    }
+    
+    .relogio { 
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        left: 0px;
+        top: 400px;
+    }
+}
+
+
+/* -------------------------------------   JEWERLY STORE   ----------------------------------------   */
+
+.jewerly_store {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #ffffff;
+    top: 1850px;
+    text-align: center;    
+}
+
+.txt1_jewel {
+    width: 369px;
+    height: 24px;
+    left: 520px;
+    top: 65px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.titulo_jewel {
+    width: 715px;
+    height: 114px;
+    left: 350px;
+    top: 95px;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 96px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #D5A368;
+}
+
+.txt2_jewel {
+    width: 776px;
+    height: 55px;
+    left: 320px;
+    top: 200px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+
+#circulo3 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 41%;
+    top: 200px;
+    border: 1.4px solid #D5A368;
+    box-sizing: border-box;
+    border-radius: 1em;
+
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 4px;   
+}
+
+#explore3 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 46%;
+    top: 220px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000000;
+    white-space: nowrap;
+}
+
+/* ------------- JEWERLY STORE RESPONSIVO ----------   */
+
+@media(max-width: 700px) {
+
+    .jewerly_store {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        top: 1600px;   
+    }
+
+    .txt1_jewel {
+        position: absolute;
+        width: 3px;
+        height: 22px;
+        left: 70px;
+        top: 15px;
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .titulo_jewel {
+        position: absolute;
+        font-size: 46px;
+        width: 715px;
+        height: 114px;
+        left: -175px;
+        top: 25px;            
+    }
+    
+    .txt2_jewel {
+        position: absolute;
+        width: 300px;
+        
+        left: 30px;
+        top: 125px;
+        word-break: normal;
+    }
+        
+    #circulo3 {
+        left: 110px;
+        top: 240px;   
+    }
+
+    #explore3 {
+        left: 170px;
+        top: 260px;   
+    }
+}
+
+/* -------------------------------------   RETANGULO VERMELHO   ----------------------------------------   */
+
+
+.retangulo_vermelho {
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    left: 0px;
+    top: 2190px;
+    background: #472138;
+}
+
+.titulo_retang_verm {
+    position: absolute;
+    width: 600px;
+    height: 209px;
+    left: 650px;
+    top: 120px;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 96px;
+    letter-spacing: 0.1em;
+    color: #D5A368;;
+}
+
+.txt_retang_verm{
+    position: absolute;
+    width: 574px;
+    height: 55px;
+    left: 650px;
+    top: 340px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.1em;
+    color: #e9e6e6;
+}
+
+#circulo4 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 650px;
+    top: 550px;
+    border: 1.4px solid #D5A368;
+    box-sizing: border-box;
+    border-radius: 1em;
+
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    padding-top: 4px;   
+}
+
+#explore4 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 725px;
+    top: 565px;
+    
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+.pulseira { 
+    width: 600px;
+    height: 700px;
+    left: 0px;
+    top: 0;
+    float: left;
+}
+
+/* ------------- RETANG. VERMELHO RESPONSIVO ----------   */
+
+@media(max-width: 700px) {
+    .retangulo_vermelho {
+        position: absolute;
+        width: 100%;
+        height: 1000px;
+        left: 0px;
+        top: 1950px;
+        background: #472138;
+    }
+    
+    .titulo_retang_verm {
+        width: 310px;
+        height: 209px;
+        left: 50px;
+        top: 570px;
+
+        font-size: 42px;
+        line-height: 100%;
+        
+    }
+    
+    .txt_retang_verm {  
+        width: 297px;
+        height: 98px;
+        left: 50px;
+        top: 680px;
+        font-size: 16px;
+        line-height: 152.62%;      
+    }
+    
+    #circulo4 {
+        left: 60px;
+        top: 900px;    
+    }
+    
+    #explore4 {     
+        left: 120px;
+        top: 920px;
+    }
+    
+    .pulseira { 
+        position: absolute;
+        width: 100%;
+        height: 500px;
+        left: 0;
+        top: 0;
+    }
+}
+
+/* -----------------------------------   CAROUSEL CATEGORIAS   --------------------------------------   */
+
+.carousel_categorias {
+    position: absolute;
+    top: 2770px;
+    left: 15px;
+    width: 100%;
+}
+
+.categ-slider {
+    padding: 80px 0 60px 0;
+    overflow: hidden;
+    top: 60px;
+    left: 0px; 
+    height: 600px;
+    width: 100%;
+  }
+
+.foto {
+    width: 900px;
+    height: 650px;
+    margin-right: 15px;
+}
+   
+  
+#seta_frente {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    top: 380px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 17px;
+    font-style: grey;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #ffffff; 
+    opacity: 0.5;
+}
+
+#seta_tras:hover, #seta_frente:hover {
+    opacity: 1;
+	transition: 400ms;
+}
+  
+
+#categ-name {
+    position: absolute;
+    width: 506px;
+    height: 98px;
+    left: 145px;
+    top: 400px;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 86px;
+    line-height: 115px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.3em;
+
+    color: #FFFFFF;
+}
+
+#categ-name2 {
+    position: absolute;
+    width: 174px;
+    height: 29px;
+    left: 180px;
+    top: 380px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+
+    text-align: right;
+    letter-spacing: 0.25em;
+
+    color: #FFFFFF;
+}
+
+
+
+
+/* ------------- CAROUSEL CATEG RESPONSIVO ----------   */ 
+
+@media(max-width: 700px) {
+
+    .carousel_categorias {
+        position: absolute;
+        top: 2830px;
+        left: 10px;
+        width: 100%;
+    }
+    
+    .categ-slider {
+        padding: 80px 0 60px 0;
+        overflow: hidden;
+        top: 60px;
+        left: 0px; 
+        width: 100%;
+      }
+    
+    .foto {
+        width: 380px;
+        height: 100%;
+        margin-right: 15px;
+    }
+      
+    #seta_frente {
+        position: absolute;
+        display: none;
+        top: 250px;
+        left: 80%; 
+    }
+
+    #categ-name {     
+        left: 55px;
+        top: 250px;  
+        font-size: 66px;
+    }
+    
+    #categ-name2 { 
+        left: 65px;
+        top: 240px;
+        font-size: 16px;
+    }
+    
+}
+
+
+/* -------------------------------------   CAROUSEL ANEIS   ----------------------------------------   */
+
+.carousel_aneis {
+    position: absolute;
+    top: 3500px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.txt_carousel {
+    position: absolute;
+    width: 75px;
+    height: 24px;
+    left: 45%;
+    top: 0px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 23px;
+    
+    text-align: center;
+    letter-spacing: 0.25em;
+    color: #000000;
+}
+
+.titulo_carousel {
+    position: absolute;
+    width: 776px;
+    height: 98px;
+    left: 30%;
+    top: 18px;
+
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 96px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    color: #472138;
+}
+
+.watch-slider {
+    padding: 80px 0 60px 0;
+    overflow: hidden;
+    top: 60px;
+    left: 0px; 
+  }
+  
+.watch-slider .slide {
+    transform: scale(0.6);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    outline: none !important;
+    opacity: 0.5;
+}
+  
+.watch-slider .slide.slick-center {
+    transform: scale(1.1);
+    opacity: 1;
+}
+   
+#seta_ant {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 100px;
+    top: 230px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 17px;
+    font-style: rgb(255, 255, 255);
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #ffffff;
+}
+  
+#seta_prox {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    top: 230px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 16px;
+    font-style: grey;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #ffffff; 
+}
+
+#seta_ant:hover, #seta_prox:hover {
+    opacity: 0.5;
+	transition: 400ms;
+}
+  
+.description {
+    position: absolute;
+    width: 573px;
+    height: 24px;
+    left: 38%;
+    top: 400px;
+
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+
+    color: #2c2a2a;
+}
+  
+/* ------------- CAROUSEL ANEIS RESPONSIVO ----------   */
+  
+ 
+@media(max-width: 700px) {
+
+    .carousel_aneis {
+        position: absolute;
+        top: 3300px;
+        left: 0px;
+        height: 100%;
+    }
+
+    .watch-slider {
+        padding: 80px 0 60px 0;
+        overflow: hidden;
+        top: 60px;
+        left: 0px; 
+        width: 400px;
+      }
+
+    .txt_carousel {
+        position: absolute;
+        width: 75px;
+        height: 24px;
+        left: 39%;
+        top: 0px;
+
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 23px;
+        
+        text-align: center;
+        letter-spacing: 0.25em;
+        color: #000000;
+    }
+
+    .titulo_carousel {
+        position: absolute;
+        left: 17%;
+        top: 30px;
+        width: 120px;
+        font-size: 60px;
+
+        word-wrap: normal; 
+        LINE-HEIGHT: 50px; 
+    }
+
+    #seta_ant {
+        left: 20px;
+        top: 270px;
+        background: #e4e0e0;
+    }
+    
+    #seta_prox {
+        left: 80%;
+        top: 270px;
+        background: #e4e0e0; 
+    }
+    
+    .description {  
+        left: 10%;
+        top: 480px;
+        font-size: 22px;
+        width: 400px;  
+    }
+}
+  
